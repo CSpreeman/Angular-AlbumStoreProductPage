@@ -9,11 +9,13 @@ import { Response } from '@angular/http/src/static_response';
 })
 export class ProductDescriptionComponent implements OnInit {
 
-  constructor(private _productService: ProductService) { }
   albumInfo;
 
+  constructor(private _productService: ProductService) { }
+
   ngOnInit() {
-    this._productService.getAlbum(1).subscribe(Response => this.albumInfo = Response)
+    this._productService.getAlbum(1).subscribe(Response => 
+      this.albumInfo = Response)
   } 
 
 }
